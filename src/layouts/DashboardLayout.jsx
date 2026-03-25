@@ -20,7 +20,7 @@ export default function DashboardLayout() {
     <>
       <h2 className="text-lg font-bold mb-4">Dashboard</h2>
 
-      <NavLink to="/users"     className={navLink} onClick={() => setSidebarOpen(false)}>
+      <NavLink to="/users" className={navLink} onClick={() => setSidebarOpen(false)}>
         <UsersIcon className="w-4 h-4" /> Users
       </NavLink>
       <NavLink to="/favorites" className={navLink} onClick={() => setSidebarOpen(false)}>

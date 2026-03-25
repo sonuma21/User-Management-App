@@ -7,9 +7,9 @@ import { StarIcon } from "@heroicons/react/24/outline";
 export default function FavoritesPage() {
   const { favorites, cachedUsers } = useApp();
 
-  const [users, setUsers]     = useState([]);
+  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError]     = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (favorites.length === 0) {
@@ -26,10 +26,9 @@ export default function FavoritesPage() {
 
     setLoading(true);
     setError("");
-    getFavUsers({ ids: favorites.join(","), per_page: 100 })
+    getFavUsers(favorites)
       .then((res) => {
-        const payload = res.data?.data ?? res.data;
-        const list    = Array.isArray(payload) ? payload : payload.data ?? [];
+        const list = res.data.data ?? [];
         setUsers(list);
       })
       .catch(() => {
@@ -67,11 +66,12 @@ export default function FavoritesPage() {
           <span className="loading loading-spinner loading-lg text-primary" />
         </div>
       ) : favorites.length === 0 ? (
-
         <div className="flex flex-col items-center justify-center py-24 gap-4 text-base-content/40">
           <StarIcon className="w-16 h-16" />
           <p className="text-lg font-medium">No favorites yet</p>
-          <p className="text-sm">Star users from the User List to save them here.</p>
+          <p className="text-sm">
+            Star users from the User List to save them here.
+          </p>
         </div>
       ) : (
         <UserTable users={users} />

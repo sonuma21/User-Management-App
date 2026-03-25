@@ -14,5 +14,5 @@ api.interceptors.request.use(config => {
 
 export const loginUser   = (credentials) => api.post("/auth/login", credentials);
 export const getUsers    = (params)       => api.get("/users", { params }); 
-export const getFavUsers = (params)      => api.get("/users/favorites", { params });
+export const getFavUsers = (ids)          =>api.post("/users/favorites", { ids });
 export const getUserById = (id)           => api.get(`/users/${id}`);
