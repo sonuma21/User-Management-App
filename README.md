@@ -6,7 +6,7 @@ A responsive single-page application built as a React programming challenge. It 
 
 ## Features
 
-- **Authentication** — Login with JWT token, protected routes, persistent session via localStorage
+- **Authentication** — Login, protected routes, persistent session via localStorage
 - **User List** — Paginated table with search, sort, and status filter
 - **User Detail** — Full profile view with avatar, designation, department, contact info, and status
 - **Favorites** — Star/unstar users, persisted locally, bulk-fetched from API
@@ -92,6 +92,23 @@ GET    /api/v1/users/{user}       # Single user detail
 
 ## Screenshots
 
+![Dashboard](src/assets/images/dash.png)
+fig:Dashboard
+
+![Filtering & Sorting](src/assets/images/filter.png)
+fig:Filtering
+
+![Filtering & Sorting](src/assets/images/sorting.png)
+fig:Sorting in descending order by name
+
+![Dark Theme](src/assets/images/dark.png)
+fig:Dark Theme
+
+![login](src/assets/images/login.png)
+fig:Login Page
+
+![favorite](src/assets/images/favorite.png)
+fig:Favorite Page
 
 
 
