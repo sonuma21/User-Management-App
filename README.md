@@ -6,13 +6,13 @@ A responsive single-page application built as a React programming challenge. It 
 
 ## Features
 
-- **Authentication** — Login, protected routes, persistent session via localStorage
-- **User List** — Paginated table with search, sort, and status filter
-- **User Detail** — Full profile view with avatar, designation, department, contact info, and status
-- **Favorites** — Star/unstar users, persisted locally, bulk-fetched from API
-- **Theme Toggle** — Light / Dark mode via DaisyUI, persisted across sessions
-- **Responsive Layout** — Collapsible sidebar drawer on mobile, static sidebar on desktop
-- **Cache Layer** — Previously fetched users are cached in context to reduce API calls
+- **Authentication**: Login, protected routes, persistent session via localStorage
+- **User List**: Paginated table with search, sort, and status filter
+- **User Detail**: Full profile view with avatar, designation, department, contact info, and status
+- **Favorites**: Star/unstar users, persisted locally, bulk-fetched from API
+- **Theme Toggle**: Light / Dark mode via DaisyUI, persisted across sessions
+- **Responsive Layout**: Collapsible sidebar drawer on mobile, static sidebar on desktop
+- **Cache Layer**: Previously fetched users are cached in context to reduce API calls
 
 ---
 
@@ -82,7 +82,7 @@ npm run dev
 The app expects a Laravel backend with the following API routes:
 
 ```
-POST   /api/login
+POST   /api/v1/auth/login
 GET    /api/v1/users              # Paginated user list
 GET    /api/v1/users/favorites    # Favourited users   
 GET    /api/v1/users/{user}       # Single user detail
